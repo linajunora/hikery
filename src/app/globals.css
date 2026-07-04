@@ -1,26 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Colors */
+  --color-text-main: #2a2a29;
+  --color-text-muted: #6b7280;
+  --color-bg-main: #fdfcfc;
+
+  /* Typography */
+  --font-primary: "Inter", system-ui, -apple-system, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* GLOBAL */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-text-main);
+  background-color: var(--color-bg-main);
+  font-family: var(--font-primary);
+
+  /*rendering tweaks for cleaner, sharper edges */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*Hikery colour palette*/
+@theme {
+  --color-h-parchment-400: #f4f4f0;
+  --color-h-parchment-500: #f0efea;
+  --color-h-parchment-600: #d1d0cb;
+  --color-h-parchment-700: #959491;
+  --color-h-parchment-800: #5d5c5a;
+  --color-h-parchment-900: #2a2a29;
+
+  --color-h-pea-200: #b6e1c2;
+  --color-h-pea-300: #7dcb95;
+  --color-h-pea-400: #50bb77;
+  --color-h-pea-500: #32b368;
+  --color-h-pea-600: #2a9b59;
+  --color-h-pea-700: #22844b;
+  --color-h-pea-800: #1b6e3e;
+
+  --color-h-kobold-200: #a2c0e6;
+  --color-h-kobold-300: #74a1d7;
+  --color-h-kobold-400: #4582c8;
+  --color-h-kobold-500: #0062b8;
+  --color-h-kobold-600: #004788;
+  --color-h-kobold-700: #003a71;
+  --color-h-kobold-800: #002145;
 }
